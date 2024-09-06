@@ -1,0 +1,88 @@
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    overflow: hidden;
+}
+#home{
+    height: 100vh;
+    background: url("https://m.media-amazon.com/images/I/71-fEkwwHyL.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home h2{
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.sel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sel a{
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.sel a:hover{
+    font-size: 1.7rem;
+    color: #ffffff;
+}
+
+#zipcode{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#branch{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#zipcode .sel, #branch .sel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zipcode .sel a, #branch .sel a{
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+#zipcode .sel a:hover, #branch .sel a:hover{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#zipcode .verticle, #branch .verticle{
+    background-color: #ffffff;
+    height: 1.4rem;
+    width: 2px;
+    margin-top: auto;
+}
+
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}

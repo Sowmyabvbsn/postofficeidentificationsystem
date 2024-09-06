@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zip Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.8/mapsJavaScriptAPI.js"
+    async defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="home">
+        <div class="container">
+            <div class="home">
+                <h2>Indian Postal Information</h2>
+                <div class="sel">
+                    <a href="#zipcode"><button style="background:white;color:black;font-weight:700;border-radius:10px">Search by entering Pincode</button></a>
+                </div>
+                <br>
+                <div class="sel">
+                    <a href="#branch"><button style="background:white;color:black;font-weight:700;border-radius:10px">Search by entering Areaname</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zipcode">
+        <div class="jumbotron bg-warning" style="background-size:cover">
+            <div class="container text-center text-white">
+                <h3 class="display-4">Postal Zipcode Information</h3>
+                <p class="lead">Enter zipcode to get the info</p>
+                <form class="needs-validation" id="form-zip" novalidate>
+                    <div class="form-group col-4 offset-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-white border-0"><i class="fas fa-search"></i></div>
+                            </span>
+                            <input type="number" class="form-control rounded-0 border-0" id="zip" placeholder="Zipcode" required>
+                            <div id="validation-zip"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="sel">
+                    <a href="#home">Home</a>
+                    <div class="verticle"></div>
+                    <a href="#branch">Search by entering Areaname</a>
+                </div>
+            </div>
+        </div>
+        <div class="container zip-details">
+            <h4 class="text-center" id="heading-zip"></h4>
+            <div class="row row-cols-1 row-cols-md-2" id="output-zip"></div>
+        </div>
+    </section>
+
+    <section id="branch">
+        <div class="jumbotron bg-danger">
+            <div class="container text-center text-white">
+                <h3 class="display-4">Postal Area Information</h3>
+                <p class="lead">Enter branch name to get the info</p>
+                <form class="needs-validation" id="form-branch" novalidate>
+                    <div class="form-group col-4 offset-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-white border-0"><i class="fas fa-search"></i></div>
+                            </span>
+                            <input type="text" class="form-control rounded-0 border-0" id="zbranch" placeholder="Area" required>
+                            <div id="validation-branch"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="sel">
+                    <a href="#home">Home</a>
+                    <div class="verticle"></div>
+                    <a href="#zipcode">Search by entering Pincode</a>
+                </div>
+            </div>
+        </div>
+        <div class="container branch-details">
+            <h4 class="text-center" id="heading-branch"></h4>
+            <div class="row row-cols-1 row-cols-md-2" id="output-branch"></div>
+        </div>
+        <div class="container">
+            <h4 class="text-center">Post Office Location</h4>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+    </section>
+
+
+<script src="app.js"></script>
+</body>
+</html>
